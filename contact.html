@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO metadata: update canonical URL after publishing to the final domain. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Kemo Citrus | General Enquiries</title>
+    <meta name="description"
+        content="Contact Kemo Citrus with questions about citrus products, services, partnerships or general enquiries.">
+    <meta name="keywords" content="contact citrus supplier, citrus enquiries South Africa, Kemo Citrus">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#245c2a">
+    <link rel="canonical" href="https://YOUR-SITE-NAME.netlify.app/contact.html">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- SITE HEADER AND MAIN NAVIGATION: each link opens the matching HTML page. -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="index.html" aria-label="Kemero Citrus Home">KEMO CITRUS</a>
+            <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="news.html">News &amp; Updates</a>
+                <a class="active" aria-current="page" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN CONTENT: contact details, map link and validated contact form. -->
+    <main>
+        <section class="page-banner">
+            <div class="container">
+                <h1>Contact Kemo Citrus</h1>
+                <p>Send a general message or ask us about citrus products and services.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container contact-grid">
+                <div class="contact-details">
+                    <h2>Get in touch</h2>
+                    <p>Use the form to send your enquiry.</p>
+                    <div>
+                        <strong>Phone</strong><span>064 507 5884</span>
+                    </div>
+                    <div><strong>Email</strong><span>hendrickkemo@gmail.com</span></div>
+                    <div><strong>Location</strong><span>South Africa (exact farm address to be added)</span>
+                    </div>
+                    <p><a href="https://www.google.com/maps/search/?api=1&amp;query=citrus+farm+South+Africa"
+                            target="_blank" rel="noopener noreferrer">Find citrus farms on Google Maps</a></p>
+                    <!-- MAP NOTE: use the real farm address in the Maps URL before publishing; do not imply this generic search is the farm's location. -->
+                </div>
+                <!-- Netlify Forms handles the server-side receipt after deployment. AJAX is provided by js/main.js. -->
+                <form class="contact-form js-ajax-form" name="contact" method="POST" action="/success.html"
+                    data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="visually-hidden"><label>Do not fill this in: <input name="bot-field"></label></p>
+                    <div class="form-group"><label for="contact-name">Full name</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" minlength="2"
+                            maxlength="80" required>
+                    </div>
+                    <div class="form-group"><label for="contact-email">Email address</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="120"
+                            required>
+                    </div>
+                    <div class="form-group"><label for="contact-phone">Phone number (optional)</label>
+                        <input id="contact-phone" name="phone" type="tel" autocomplete="tel" pattern="[+0-9() -]{7,20}"
+                            title="Enter a phone number using digits, spaces, brackets, plus sign or hyphens.">
+                    </div>
+                    <div class="form-group"><label for="contact-type">Message type</label>
+                        <select id="contact-type" name="messageType" required>
+                            <option value="">Choose a message type</option>
+                            <option>Product enquiry</option>
+                            <option>Bulk order</option>
+                            <option>Services</option>
+                            <option>Partnership</option>
+                            <option>General message</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label for="contact-message">Your message</label>
+                        <textarea id="contact-message" name="message" minlength="10" maxlength="2000" rows="6"
+                            required></textarea>
+                    </div>
+                    <div class="form-status" role="status" aria-live="polite"></div>
+                    <button class="button" type="submit">Send Message</button>
+                    <p class="form-note">This form is configured for Netlify Forms. It will not send messages while
+                        opened directly from your computer; deploy the site to Netlify and configure form notifications.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kemo Citrus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

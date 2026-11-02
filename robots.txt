@@ -1,0 +1,5 @@
+# Replace the sitemap URL with the final published domain before launch.
+User-agent: *
+Allow: /
+Disallow: /success.html
+Sitemap: https://YOUR-SITE-NAME.netlify.app/sitemap.xml
